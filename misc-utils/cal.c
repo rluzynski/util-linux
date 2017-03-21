@@ -538,7 +538,7 @@ static void headers_init(struct cal_control *ctl)
 	}
 
 	for (i = 0; i < MONTHS_IN_YEAR; i++) {
-		ctl->full_month[i] = nl_langinfo(MON_1 + i);
+		ctl->full_month[i] = nl_langinfo(ALTMON_1 + i);
 		/* The +1 after year_len is space in between month and year. */
 		if (ctl->week_width < strlen(ctl->full_month[i]) + year_len + 1)
 			ctl->header_hint = 1;
